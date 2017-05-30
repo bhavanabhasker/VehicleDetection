@@ -77,5 +77,5 @@ Here's an example result showing the heatmap from a series of frames of video, t
 ### Discussion
 Linear SVM classifier is used in the current implementation. It provides good accuracy but consumes some time to process around 16K images. I would like to experiment with different classification algorithms in the next version to ensure scalability and for better prediction. 
 
-Combined hog feature extraction and color based features was used in the project. I have tried feature extraction using color spaces such as HLS, LUV and YCrCb.  Although,LUV initially performed better,'RGB' and 'YCrCb' was selected as it provided better results. The HOG subsampling identified a single bounding box for two vehicles. I would like to try tuning the parameters to make sure that two cars will be identified seperately in the next version.  
+Combined hog feature extraction and color based features are used in the project. I have tried feature extraction using color spaces such as HLS, LUV and YCrCb.  Although,LUV initially performed better,'RGB' and 'YCrCb' was selected as it provided better results. The HOG subsampling identified a single bounding box for two vehicles. I would like to try tuning the parameters to make sure that two cars will be identified seperately in the next version.  
 
