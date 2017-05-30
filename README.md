@@ -45,7 +45,7 @@ I trained a linear SVM using sklearn LinearSVC classifier. The training code use
 
 ### Sliding Window Search
 
-The code for sliding window search can be found in the same ipython notebook. The y axis for the images and video frames was restricted to [400,650]. I chose the scaling factor of 1.5 to capture the vehicles. Here is an example image from this step,	
+The code for sliding window search can be found in the same ipython notebook. The y axis for the images and video frames was restricted to [400,650]. The y value was selected to ensure that the cars are captured in the area of interest. The window size was chosen to be 64 with an overlap of 50% between the adjacent windows in both horizontal and vertical dimensions. I chose the scaling factor of 1.5 to capture the vehicles correctly. Here is an example image from this step,	
 
 
 ![alt text][image3]
