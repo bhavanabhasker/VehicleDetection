@@ -18,7 +18,7 @@ The goals / steps of this project are the following:
 [image3]: ./images/sliding_windows.png
 [image4]: ./images/sliding_heat.png
 [image5]: ./images/bboxes_and_heat.png
-[video1]: ./project_video.mp4
+[video1]: ./projectvideo_output.mp4
 
 
 ---
@@ -62,7 +62,7 @@ I searched using HOG features plus spatially binned color and histograms of colo
 Here's a [link to my video result](./project_video.mp4)
 
 
-####2. False positive detection for overlapping bounding boxes
+#### False positive detection for overlapping bounding boxes
 
 I recorded the positions of positive detections in each frame of the video.  From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions.  I then used `scipy.ndimage.measurements.label()` to identify individual blobs in the heatmap.  I then assumed each blob corresponded to a vehicle.  I constructed bounding boxes to cover the area of each blob detected.  
 
@@ -77,5 +77,5 @@ Here's an example result showing the heatmap from a series of frames of video, t
 ### Discussion
 Linear SVM classifier is used in the current implementation. It provides good accuracy but consumes some time to process around 16K images. I would like to experiment with different classification algorithms in the next version to ensure scalability and for better prediction. 
 
-Combined hog feature extraction and color based features was used in the project. I have tried feature extraction using color spaces such as HLS, LUV and YCrCb.  Although,LUV initially performed better,'RGB' and 'YCrCb' was selected as it provided better results. The HOG subsampling identified a single bounding box for two vehicles. I would like to try tuning the parameters to make sure that two cars will be identified seperately in the next version.  
+Combined hog feature extraction and color based features are used in the project. I have tried feature extraction using color spaces such as HLS, LUV and YCrCb.  Although,LUV initially performed better,'RGB' and 'YCrCb' was selected as it provided better results. The HOG subsampling identified a single bounding box for two vehicles. I would like to try tuning the parameters to make sure that two cars will be identified seperately in the next version.  
 
